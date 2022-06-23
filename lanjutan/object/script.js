@@ -100,18 +100,56 @@
 // console.log(budi);
 // console.log(wuling);
 
-function Siswa(nama, energi) {
-    // let this = Object.create(Siswa.prototype); // default function Siswa sudah memiliki parent yg bernama prototype
-    this.nama = nama;
-    this.energi = energi;
+// function Siswa(nama, energi) {
+//     // let this = Object.create(Siswa.prototype); // default function Siswa sudah memiliki parent yg bernama prototype
+//     this.nama = nama;
+//     this.energi = energi;
+// }
+
+// Siswa.prototype.makan = function (porsi) {
+//     this.energi += porsi;
+//     return `Halo ${this.nama}, selamat makan!`;
+// }
+
+// Siswa.prototype.main = function (jam) {
+//     this.energi += jam;
+//     return `Halo ${this.nama}, selamat main!`;
+// }
+
+// Siswa.prototype.tidur = function (jam) {
+//     this.energi += jam * 3;
+//     return `Halo ${this.nama}, selamat tidur!`;
+// }
+
+// let tole = new Siswa('tole', 20);
+
+// tole.tidur(3)
+// console.log(tole);
+
+// Versi Class
+class Siswa {
+    constructor(nama, energi) {
+        this.nama = nama;
+        this.energi = energi;
+    }
+
+    makan (porsi) {
+        this.energi += porsi;
+        return `Halo ${this.nama}, selamat makan!`;
+    }
+    
+    main (jam) {
+        this.energi += jam;
+        return `Halo ${this.nama}, selamat main!`;
+    }
+    
+    tidur (jam) {
+        this.energi += jam * 3;
+        return `Halo ${this.nama}, selamat tidur!`;
+    }
 }
 
-Siswa.prototype.makan = function (porsi) {
-    this.energi += porsi;
-    return `Halo ${this.nama}, selamat makan!`;
-}
+let tole = new Siswa('tole', 90);
 
-let tole = new Siswa('tole', 20);
-
-tole.makan(3)
+tole.tidur(10)
 console.log(tole);

@@ -38,10 +38,19 @@ const dry = new Promise((callback) => {
     callback(boiled)
 })
 
+// dry
+//     .then( (resolve) => {
+//         console.log(resolve,'Done!')
+//     })
+
 const fold = new Promise((callback) => {
     callback(seasoning)
 })
 
+// fold
+//     .then( (resolve) => {
+//         console.log(resolve,'Done!')
+//     })
 let doCookNoodles = Promise.all([wash,dry,fold]);
 
 doCookNoodles
