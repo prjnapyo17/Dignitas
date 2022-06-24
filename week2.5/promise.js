@@ -115,5 +115,3 @@ async function main(){
 }
 
 main()
-
->>>>>>> afb34ac0da5677ce89be6f2263235a190d356c5d
